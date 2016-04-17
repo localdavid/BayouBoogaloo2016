@@ -1,0 +1,107 @@
+#more_box {
+	display: block;
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	z-index: 300;
+	position: fixed;
+	bottom: 0;
+	box-shadow: 0px -4px 4px rgba(0,0,0, .3);
+
+	& h1 {
+		display: block;
+		font-family: $secondary-font;
+		font-size: 1.3em;
+		color: black;
+		margin: 0;
+		text-align: center;
+		padding: 10px;
+		
+		@include media($breakpoint-1) {
+				padding: 3%;					
+		}
+		
+
+		
+		
+// 	padding: 10px 0px 00px 0px;	
+	}
+}
+
+#more_box {
+	@include media($breakpoint-1) {
+	visibility: visible;
+	}
+	@include media($breakpoint-2) {
+	visibility: hidden;
+	}
+	@include media($breakpoint-3) {
+	visibility: hidden;
+	}	
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	z-index: 300;
+	position: fixed;
+	bottom: 0;
+	box-shadow: 0px -4px 4px rgba(0,0,0, .3);
+	
+
+	& h1 {
+		display: block;
+		font-family: $secondary-font;
+		font-size: 1.3em;
+		color: black;
+		margin: 0;
+		text-align: center;
+		padding: 10px;
+		
+		@include media($breakpoint-1) {
+				padding: 3%;					
+		}
+		
+
+		
+		
+// 	padding: 10px 0px 00px 0px;	
+	}
+}
+
+#more_box_2 {
+	@include media($breakpoint-1) {
+	visibility: hidden;
+	}
+	@include media($breakpoint-2) {
+	visibility: visible;
+	}
+	@include media($breakpoint-3) {
+	visibility: visible;
+	}
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	z-index: 301;
+	position: fixed;
+	bottom: 0;
+	box-shadow: 0px -4px 4px rgba(0,0,0, .3);
+	
+
+	& h1 {
+		display: block;
+		font-family: $secondary-font;
+		font-size: 1.3em;
+		color: black;
+		margin: 0;
+		text-align: center;
+		padding: 10px;
+		
+		@include media($breakpoint-1) {
+				padding: 3%;					
+		}
+		
+
+		
+		
+// 	padding: 10px 0px 00px 0px;	
+	}
+}

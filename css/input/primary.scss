@@ -1,0 +1,23 @@
+@import 'visual_grid';
+@import 'plugins';
+@import 'variables';
+@import 'header';
+@import 'background';
+@import	'navigation';
+@import 'cubes';
+@import 'more';
+
+
+body {
+	margin-top: 180;
+
+}
+
+section.non_header_elements{
+	position: relative;
+	margin-top: 180px;
+	background-color: white;
+	z-index: 1;
+}
+
+

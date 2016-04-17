@@ -1,0 +1,45 @@
+$primary-color: #F6742D;
+$primary-color-darken: darken($primary-color, 10%);
+$primary-color-darken2: darken($primary-color, 25%);
+$primary-color-darken3: darken($primary-color, 35%);
+
+
+$primary-color-lighten: lighten($primary-color, 15%);
+$secondary-color: #ffec96;
+$secondary-color-lighten: lighten($secondary-color, 15%);
+$secondary-color-lighten2: lighten($secondary-color, 50%);
+
+
+$second-color: #ffdd42;
+$second-color-darken: darken($second-color, 10%);
+$second-color-darken2: darken($second-color, 30%);
+
+$purple-color: #ce5be4;
+$purple-color-darken: darken($purple-color, 10%);
+$purple-color-darken2: darken($purple-color, 30%);
+
+$column-color: #e8f1f4;
+
+$date-fade-color: #e8f1f4;
+
+$body-line-height: 5em;
+
+$color-3: #4c4e42;
+$color-3-darken: darken($color-3, 10%);
+$color-3-darken2: darken($color-3, 25%);
+$color-3-darken3: darken($color-3, 35%);
+
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700|Oswald:700|Alfa+Slab+One);
+
+
+
+// Font Variables
+$primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Arvo', serif;
+$headline-font: 'Alfa Slab One', cursive;
+
+// Breakpoints
+$breakpoint-1: new-breakpoint(max-width 600px);
+$breakpoint-2: new-breakpoint(min-width 601px);
+$breakpoint-3: new-breakpoint(min-width 950px);

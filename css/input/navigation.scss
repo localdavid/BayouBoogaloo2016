@@ -1,0 +1,167 @@
+section.navigation {
+			z-index: 400;
+
+	@include media($breakpoint-2) {
+		position: relative;
+		background-color: white;
+		box-shadow: 0 4px 5px rgba(0,0,0, .3);
+
+
+	}
+    
+	@include media($breakpoint-1) {
+		position: fixed;
+		margin: 10px 0 0 0;
+		top: 90px;
+		width: 100%;
+		box-shadow: 0 4px 5px rgba(0,0,0, .3);
+		background-color: white;		
+	}
+}
+/*
+section.navigation_scrolled{
+	position: fixed;
+	width: 100%;
+	z-index: 300;
+	margin: 0;
+	padding: 0;
+	margin-top: 180;
+	top: 0;
+
+}
+*/
+
+// Drop down menu to select weekend
+
+	.date_select_div {
+	height: 50px;
+	width: 100%;
+		@include media($breakpoint-1) {
+		height: 30px;
+		}
+}
+
+/* .myMenu is the class for the whole menu */
+.myMenu {
+	margin:0;
+	padding:0;
+	width: 100%;
+	font-size: 2em;
+	font-family: $secondary-font;
+	font-weight: 400;
+	color: white;
+	background-color: $primary-color;
+	}
+  
+  /* li is the top level box, the first one you see */
+	li {
+		width: 100%;
+		list-style:none;
+		float:left;
+		font:12px Arial, Helvetica, sans-serif #111;
+		& a:link, a:visited {
+        display:block;
+        text-decoration:none;
+        background-color:$primary-color-darken;
+        padding: 0.5em 2em;
+        margin:0;
+        border-right: 1px solid #fff;
+        color:#111;
+        	@include media($breakpoint-1) {
+	        	padding: 12px 0px 7px 10px;
+	        	font-size: 1em;
+			}
+		@include media($breakpoint-1) {
+			padding: 0.1em;					
+			}	
+        }
+
+    /* li ul is the container for the boxes that come out when the top box is expanded */
+      ul {
+	    width: 100%;
+        position:absolute;
+        visibility:hidden;
+        border-top:1px solid #fff;
+        margin:0;
+        padding:0;
+        li {
+          display:inline;
+          float:none;
+          a:link, .myMenu li ul li a:visited {
+            background-color:$primary-color;
+            width:auto;
+	          }
+          }
+        
+      }
+  }
+
+.myMenu li ul li a:link, .myMenu li ul li a:visited {
+	background-color:$primary-color;
+	width:auto;
+}
+
+.myMenu li ul li a:hover {
+	background-color:$primary-color-darken2;	
+}
+
+
+
+
+
+
+// Filter by band info
+
+.filters {
+	// This puts the divs into the Neat grid
+	@include outer-container;
+	background-color: white;
+	padding: 10px;
+}
+
+
+.band_btn {
+	font-size: 1.1em;
+	color: white;
+	background-color: $primary-color-darken;
+	border: 1 pt;
+	border-radius: 3px;
+	border-style: solid;
+// 	border-color: $primary-color-darken;
+	padding: 10px 15px 10px 15px;
+	margin: 8px;
+}
+
+// Basin's Pick Button
+
+.count_basin_button {
+	@extend .band_btn;
+	background-color: white;
+	color: $second-color-darken;
+	border-color: $second-color-darken;
+
+}
+
+.basin_button_active {
+	color: white;
+	background-color: $second-color-darken;
+	border-color: $second-color-darken;
+}
+	
+
+
+// Performer's Pick Button
+
+.performer_pick_button {
+	@extend .band_btn;
+	color: $purple-color-darken;
+	background-color: white;
+	border-color:  $purple-color-darken;
+}
+
+.performer_pick_button_active {
+	color: white;
+	background-color: $purple-color-darken;
+	border-color: $purple-color-darken;
+
+}

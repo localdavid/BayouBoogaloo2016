@@ -1,0 +1,289 @@
+// Mixins
+
+@mixin column-3 {
+
+    background: $column-color;
+
+	@include media($breakpoint-2) {
+		@include span-columns(4);
+		height: 800px;
+	}
+    
+	@include media($breakpoint-1) {
+		@include span-columns(12);
+		height: 100%;			
+	}
+}
+
+@mixin column-4 {
+    background: $column-color;
+
+	@include media($breakpoint-2) {
+		@include span-columns(3);
+		height: 910px;		
+	}
+    
+	@include media($breakpoint-1) {
+		@include span-columns(12);
+		height: 100%;			
+	}
+}
+
+@mixin column_last{
+	@include column-3;
+	@include omega();
+}
+
+@mixin column_last-4{
+	@include column-4;
+	@include omega();
+}
+
+@mixin band_box_template {
+	height: 100px;
+	width: 100%;
+	display: table;
+	vertical-align: middle;
+	text-align: center;
+	@include media($breakpoint-1) {
+			height: 80px;				
+	}
+	
+}
+
+
+
+section {
+		
+	&#cubes {
+		background-color: white;
+		
+			section.cubes_row {
+				@include outer-container;
+				border: 5px;
+				padding-bottom: 70px;
+			}
+		}
+		
+		.active_cubes_date {
+			height:60px;
+			width: 100%;
+// 			@include span-columns(12);
+			@include linear-gradient($date-fade-color,white);
+			display: table;
+
+			h1{
+				font-family: $secondary-font;
+				font-size: 2em;
+				color: #858c97;
+				vertical-align: middle;
+				text-align: center;
+			}	
+			    
+
+		}
+
+						
+		.cubes_Fri {
+			@include column-3;
+		}
+
+		.cubes_Fri_last {
+			@include column-3;
+			@include omega;
+		}		
+		
+		.cubes_Sat {
+			@include column-4;
+		}	
+		
+		.cubes_Sat_last {
+			@include column-4;
+		}		
+	
+				
+		.band_box {
+			@include band_box_template;
+			@include linear-gradient($primary-color, $primary-color-darken );
+			& a {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 200; 
+				text-decoration: none;
+			}
+		}
+		
+		.band_box_basin_pick {
+			@include band_box_template;
+			@include linear-gradient($second-color,$second-color-darken);
+/*
+			background-repeat: no-repeat, repeat;
+			background-position: 95% 10%, 0 0;
+			background-size: 50px, auto;
+*/
+		}		
+		
+		.band_box_performer_pick {
+			@include band_box_template;
+			@include linear-gradient($purple-color, $purple-color-darken );
+		}		
+			
+		.text, .text2 {
+			display: table-cell;
+			vertical-align: middle;
+			@include band_box_template;
+
+		}
+		
+		.text2 {
+			color: gainsboro;
+			display: table-cell;
+			vertical-align: middle;
+			@include band_box_template;
+			@include linear-gradient($color-3-darken, $color-3);			
+		}
+
+		h3 {
+			font-size: 1.1em;
+			text-align: center;
+			line-height: .5em;
+			font-family: $secondary-font;
+			font-weight: 700;
+		}
+		
+		h4 {
+			font-family: $primary-font;
+			font-size: .9em;
+			letter-spacing: 1px;
+			color: inherit;
+			vertical-align: middle;
+			text-align: center;	
+		}
+		
+		h5 {
+			font-family: $primary-font;
+			font-size: 0.9em;
+			letter-spacing: 1px;
+			color: inherit;
+			vertical-align: middle;
+			text-align: center;	
+		    text-transform: uppercase;	
+		}
+		
+		h1 {
+			font-size: 2em;
+			// 				text-align: center;
+			line-height: 1.1em;
+			font-family: $primary-font;
+			position: relative;
+			bottom: .2em;
+			& .small{
+				font-size: 1em;
+				}
+			@include media($breakpoint-1) {
+				font-size: 1.6em;				
+				}
+			}	
+		}
+		
+		.band_box_kids {
+			@include band_box_template;
+			@include linear-gradient($primary-color, $primary-color-darken );
+			height: 70px;
+			& a {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 200; 
+				text-decoration: none;
+				
+			& h1 {
+				font-size: 3em;
+				// 				text-align: center;
+				line-height: 1em;
+				font-family: $primary-font;
+				position: relative;
+				bottom: .2em;
+				}
+			}
+			h3 {
+				line-height: .2em;
+				position: relative;
+				top: .2em;
+				@include media($breakpoint-1) {
+					top: .3em;						
+				}
+			}
+		}
+	
+
+
+
+	
+.full_cube {
+	display: none;
+}
+
+
+
+.band_name_box {
+	float: left;
+	width: 80%;
+	background: gray;
+}
+
+.icon_box {
+	float: right;
+	width: 20%;
+	height: 90%;
+}
+
+.g_box {
+	content: url(/img/G.svg);
+}
+
+.pick_box{
+	content: url(/img/check.svg);
+	width: 100%;
+}
+
+
+// Stage Name
+
+h1.neighborhood_name{
+	font-family: $secondary-font;
+	font: 400;
+	color: $primary-color-darken;
+	text-align: center;
+}
+
+h2{
+	// 				text-align: center;
+	line-height: 1.1em;
+	font-family: $primary-font;
+		@include media($breakpoint-2) {
+		font-size: 1.4em;
+		line-height: 1.2em;
+		position: relative;
+		bottom: 5 em;
+	}
+    
+	@include media($breakpoint-1) {
+		@include span-columns(12);
+		height: 100%;
+		font-size: 1.6em;
+		position: relative;
+		bottom: .2em;
+			
+	}
+}
+
+
+	
+
+
